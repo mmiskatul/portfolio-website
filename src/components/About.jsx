@@ -11,11 +11,11 @@ export default function About() {
         About Me
       </h2>
 
-      <div className="w-full flex flex-col md:flex-row items-center  md:items-start justify-around gap-20">
+      <div className="w-full flex flex-col md:flex-row items-center  md:items-start justify-around gap-10">
         {/* Left side - Profile Image */}
-        <div className="flex-shrink-0">
+        <div className="flex flex-shrink-0  justify-center">
           <img
-            className="rounded-full shadow-2xl w-64 h-64 object-cover border-4 border-indigo-500"
+            className="rounded-full shadow-2xl w-80 h-80 object-cover border-4 border-indigo-500"
             src={profileImage}
             alt="Profile"
           />

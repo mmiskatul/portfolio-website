@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
 
 export default function Hero() {
-   const roles = ["Developer", "Problem Solver", "AI Enthusiast"];
+   const roles = ["Web Developer", "Problem Solver", "AI Enthusiast"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
