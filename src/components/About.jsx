@@ -1,38 +1,60 @@
+import profileImage from "../assets/profileImage.jpg";
+import cvFile from "../assets/Miskatul Masabi.pdf";
+
 export default function About() {
   return (
     <section
       id="about"
-      className=" max-w-6xl mx-auto py-20 px-6 bg-gradient-to-b from-purple-700 to-gray-500 rounded-lg shadow-lg"
+      className="min-h-screen flex flex-col items-center mx-auto py-12 px-6 bg-white rounded-lg shadow-sm"
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+      <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-900 tracking-wide">
         About Me
       </h2>
-      <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
-        {/* Card 1 */}
-        <div className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg p-8 shadow-lg hover:scale-105 hover:shadow-blue-400 transform transition duration-300">
-          <h3 className="text-2xl font-semibold mb-4">Skills</h3>
-          <p>
-            Experienced Full Stack Developer skilled in React.js, Node.js, and Tailwind CSS.
-            Building elegant, efficient, and scalable web applications.
-          </p>
+
+      <div className="w-full flex flex-col md:flex-row items-center  md:items-start justify-around gap-20">
+        {/* Left side - Profile Image */}
+        <div className="flex-shrink-0">
+          <img
+            className="rounded-full shadow-2xl w-64 h-64 object-cover border-4 border-indigo-500"
+            src={profileImage}
+            alt="Profile"
+          />
         </div>
 
-        {/* Card 2 */}
-        <div className="flex-1 bg-gradient-to-r from-green-500 hover:shadow-blue-400 to-teal-600 text-white rounded-lg p-8 shadow-lg hover:scale-105 transform transition duration-300">
-          <h3 className="text-2xl font-semibold mb-4">Focus</h3>
-          <p>
-            Passionate about creating smooth user experiences and scalable architecture,
-            ensuring apps perform beautifully on all devices.
+        {/* Right side - Info */}
+        <div className="flex flex-col gap-4 text-gray-700 max-w-lg">
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Name:</span> Miskatul
+            Masabi
           </p>
-        </div>
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Date of Birth:</span>{" "}
+            April 3, 2003
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Address:</span> Dhaka,
+            Bangladesh
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Zip Code:</span> 1216
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Email:</span>{" "}
+            masabimiskat@gmail.com
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold text-gray-900">Phone:</span> +880
+            1310694667
+          </p>
 
-        {/* Card 3 */}
-        <div className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-blue-400 text-white rounded-lg p-8 shadow-lg hover:scale-105 transform transition duration-300">
-          <h3 className="text-2xl font-semibold mb-4">Learning</h3>
-          <p>
-            Continuously expanding knowledge in AI, Machine Learning, and advanced data structures
-            to stay ahead in the tech world.
-          </p>
+          {/* Download Button */}
+          <a
+            href={cvFile}
+            download="Miskatul Masabi.pdf"
+            className="mt-8 inline-block bg-indigo-600 px-6 py-3 text-lg font-bold text-white rounded-lg shadow-md hover:bg-indigo-700 transition-transform transform hover:scale-105 active:scale-95"
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </section>

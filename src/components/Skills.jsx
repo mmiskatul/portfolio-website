@@ -17,7 +17,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-white max-w-5xl mx-auto py-20 px-6 rounded-lg shadow-lg"
+      className=" min-h-screen mx-auto py-20 px-6 bg-white "
     >
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Skills</h2>
       <div className="flex flex-wrap justify-center gap-5">

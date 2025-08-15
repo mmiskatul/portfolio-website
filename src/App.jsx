@@ -8,15 +8,14 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen ">
       <Navbar />
-      <main className="container mx-auto px-4 py-16">
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
+      <main className="container mx-auto px-4 py-5">
+       <Hero />
+       <About/>
+       <Projects/>
+       <Skills/>
+       {/* contact componet */}
       </main>
       <Footer/>
     </div>
