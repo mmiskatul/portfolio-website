@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin,  FaMapMarkerAlt,  } from "react-icons/fa";
+import { FaWhatsapp } from 'react-icons/fa';
 import { SiX } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 
@@ -41,10 +42,10 @@ export default function Contact() {
       text: "masabimiskat@gmail.com",
       link: "mailto:masabimiskat@gmail.com"
     },
-    {
-      icon: <FaPhoneAlt className="w-5 h-5 text-indigo-600" />,
-      text: "+880 1310694667",
-      link: "tel:+8801310694667"
+     {
+      icon: <FaWhatsapp className="w-5 h-5 text-indigo-600" />,
+      text: "Chat on WhatsApp",
+      link: "https://wa.me/8801310694667"
     },
     {
       icon: <FaMapMarkerAlt className="w-5 h-5 text-indigo-600" />,
