@@ -10,7 +10,6 @@ export default function Skills() {
       skills: [
         { name: "React.js", icon: <FaReact className="text-blue-500" size={24} />, link: "https://reactjs.org/" },
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" size={24} />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-        { name: "TypeScript", icon: <TbBrandTypescript className="text-blue-600" size={24} />, link: "https://www.typescriptlang.org/" },
         { name: "HTML5", icon: <SiHtml5 className="text-orange-500" size={24} />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
         { name: "CSS3", icon: <SiCss3 className="text-blue-400" size={24} />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" size={24} />, link: "https://tailwindcss.com/" },
