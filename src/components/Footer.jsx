@@ -1,6 +1,5 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { SiX } from "react-icons/si";
+import { SiX, SiCodeforces } from "react-icons/si";
 
 export default function Footer() {
   const socialLinks = [
@@ -27,6 +26,12 @@ export default function Footer() {
       icon: <FaEnvelope className="w-5 h-5" />,
       url: "mailto:masabimiskat@gmail.com",
       color: "hover:text-red-600"
+    },
+    {
+      name: "Codeforces",
+      icon: <SiCodeforces className="w-5 h-5" />,
+      url: "https://codeforces.com/profile/Miskatul_Masabi",
+      color: "hover:text-orange-500"
     }
   ];
 
@@ -57,10 +62,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
-
         </div>
-
-        
       </div>
     </footer>
   );
