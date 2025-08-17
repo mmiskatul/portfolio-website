@@ -12,7 +12,7 @@ export default function Footer() {
     {
       name: "LinkedIn",
       icon: <FaLinkedin className="w-5 h-5" />,
-      url: "https://www.linkedin.com/in/mmiskatul-masabi/",
+      url: "https://www.linkedin.com/in/md-mishkatul-masabi-b55b76292/",
       color: "hover:text-blue-700"
     },
     {
