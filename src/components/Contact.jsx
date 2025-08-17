@@ -16,7 +16,7 @@ export default function Contact() {
     {
       name: "LinkedIn",
       icon: <FaLinkedin className="w-6 h-6" />,
-      url: "https://www.linkedin.com/in/mmiskatul-masabi/",
+      url: "https://www.linkedin.com/in/md-mishkatul-masabi-b55b76292/",
       color: "hover:text-blue-700",
       bgColor: "hover:bg-blue-50"
     },
