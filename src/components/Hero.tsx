@@ -85,7 +85,7 @@ export default function Hero() {
           </a>
           
           <a
-            href="/"
+            href="/Miskatul Masabi AI-ML  (2).pdf"
             download="Miskatul Masabi AI-ML  (2).pdf"
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/25 text-white font-semibold text-sm tracking-wide transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-md"
           >
