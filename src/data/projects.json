@@ -1,0 +1,117 @@
+[
+  {
+    "id": "ai-fitness-coach",
+    "title": "AI Fitness Coach Platform",
+    "category": "Generative AI",
+    "description": "An interactive AI-powered workout generator and nutrition planning system offering conversational coaching, health integrations, and progression modeling.",
+    "problemSolved": "Personalized fitness and nutrition advice is expensive and rarely adaptive. Standard apps offer generic static plans that do not adjust to real-time biofeedback or user constraints (injuries, equipment availability).",
+    "architecture": "Mobile client (React Native) -> REST API Gateway -> FastAPI Backend -> LangChain Agent -> LLM (Claude & OpenAI) -> VectorDB (Pinecone for contextual memory) & MongoDB (User profiles and workout history).",
+    "techStack": ["OpenAI", "Claude", "FastAPI", "React Native", "MongoDB", "Pinecone", "LangChain"],
+    "gitLink": "https://github.com/mmiskatul/ai-fitness-coach",
+    "liveLink": "https://ai-fitness-coach.demo.dev",
+    "gallery": [],
+    "features": [
+      "Dynamic AI workout generation based on daily biomechanical feedback",
+      "Real-time AI nutrition recommendation and meal adjustment via macro tracking",
+      "Conversational AI coaching using personalized multi-modal LLM memory",
+      "Apple Health and Google Fit biometric data synchronization",
+      "Interactive 3D model visualizations of exercise forms"
+    ],
+    "challenges": "Providing consistent and safe coaching advice without hallucinations. Generating structurally sound nutrition plans that strictly respect dietary restrictions.",
+    "solutions": "Implemented rigorous validation using guardrails (Guardrails AI) and output structured JSON schemas. Designed an agentic RAG system retrieving validated medical-sports guidelines.",
+    "results": "Delivered 12,000+ custom workout programs with a 92% user adherence rate. Response latency for conversational queries was reduced to 340ms using token streaming.",
+    "lessonsLearned": "Standard RAG yields poor sports science results. Incorporating a dynamic rule engine that pre-filters vector index queries by biometrics is crucial to preventing athletic injuries."
+  },
+  {
+    "id": "risto-ai",
+    "title": "RistoAI - Restaurant Inventory Management",
+    "category": "Computer Vision",
+    "description": "An automated invoice processing and inventory tracking platform powered by OCR and Generative AI, delivering real-time cost analysis and supplier metrics.",
+    "problemSolved": "Restaurant operators waste dozens of hours copying item names, unit quantities, and tax figures from handwritten, crumpled, or poorly lit invoices into outdated inventory systems.",
+    "architecture": "Document Upload -> OpenCV skew/deskew filters -> LayoutLMv3 Segmenter -> Tesseract OCR Engine -> GPT-4o Pydantic Extraction API -> MongoDB.",
+    "techStack": ["OCR", "OpenAI", "FastAPI", "MongoDB", "Python", "React", "Tailwind CSS"],
+    "gitLink": "https://github.com/mmiskatul/risto-ai",
+    "liveLink": "https://risto-ai.demo.dev",
+    "gallery": [],
+    "features": [
+      "Instant invoice OCR uploading with LayoutLM text structure extraction",
+      "Automatic item classification and matching against current stock database",
+      "Live ingredient food cost analysis and markup recommendations",
+      "Predictive supplier price tracking and threshold alerts",
+      "Automated weekly purchase order generation"
+    ],
+    "challenges": "Poor document quality (handwritten annotations, greasy stains, creased folds) causing standard OCR engines to read numbers incorrectly (e.g., misreading '8' as '0' or 'B').",
+    "solutions": "Developed a hybrid OCR pipeline using OpenCV for preprocessing (deskewing, contrast enhancement) combined with GPT-4o for multi-modal text reconstruction and semantic validation.",
+    "results": "Achieved a 98.4% extraction accuracy rate across 10,000+ test receipts, reducing average restaurant invoice processing times from 15 minutes to under 8 seconds.",
+    "lessonsLearned": "Preprocessing (contrast stretching, adaptive thresholding) is 80% of the battle in OCR. Combining raw text coordinates with a semantic LLM parser produces far better results than heuristic rule-based templates."
+  },
+  {
+    "id": "agenthub",
+    "title": "AgentHub - Multi-Agent AI Platform",
+    "category": "Generative AI",
+    "description": "An enterprise-grade orchestration workspace enabling users to deploy, monitor, and link autonomous multi-agent systems with hierarchical memory and RAG engines.",
+    "problemSolved": "Traditional single-agent setups run sequentially and fail when faced with non-deterministic sub-tasks (e.g. searching the web while debugging code). Context windows easily overflow, and loops are hard to break without state tracking.",
+    "architecture": "React Frontend -> WebSockets Gateway -> FastAPI Orchestration Engine -> LangGraph State Graph Manager -> Collaborative LLMs (Gemini & OpenAI) -> VectorDB Context Retrievers.",
+    "techStack": ["LangGraph", "OpenAI", "Gemini", "FastAPI", "WebSockets", "ChromaDB", "LangChain"],
+    "gitLink": "https://github.com/mmiskatul/agenthub",
+    "liveLink": "https://agenthub-platform.demo.dev",
+    "gallery": [],
+    "features": [
+      "Visual drag-and-drop builder for custom agent topologies",
+      "State-preserving multi-agent communication graph (supervisor-worker models)",
+      "Adaptive RAG ingestion supporting semantic search over documents and web APIs",
+      "Shared long-term vector database memory and short-term windowed memory",
+      "Real-time stream logging of agent thoughts, tools, and token metrics"
+    ],
+    "challenges": "Managing infinite loop conditions where research and coding agents keep debugging back-and-forth without converging, causing runaway token billing.",
+    "solutions": "Utilized LangGraph's state graph compilation with strict checkpointers and implemented timeout limits, circuit-breaker nodes, and asynchronous token-streaming WebSockets.",
+    "results": "Reduces execution time for multi-step data tasks by 45% compared to linear chain-of-thought implementations. Built-in checker nodes validate scripts before run, cutting token consumption by 30%.",
+    "lessonsLearned": "Strict schema constraints on tool calls and explicit 'human-in-the-loop' interrupts for terminal actions are absolutely critical to maintaining control and safety in autonomous systems."
+  },
+  {
+    "id": "safety-monitoring",
+    "title": "Construction Safety Monitoring System",
+    "category": "Computer Vision",
+    "description": "A real-time safety compliance monitoring system using YOLO object detection models to flag PPE violations in live video feeds.",
+    "problemSolved": "Safety officers cannot watch dozens of construction site CCTV streams continuously. Delays in identifying missing helmets or vests lead directly to compliance penalties and high injury rates.",
+    "architecture": "RTSP CCTV Feeds -> OpenCV Decoders -> YOLOv8 Detection -> ByteTrack Tracker -> Shapely Geofencing logic -> Slack Webhooks API.",
+    "techStack": ["YOLO", "OpenCV", "Python", "PyTorch", "FastAPI", "React"],
+    "gitLink": "https://github.com/mmiskatul/safety-monitoring",
+    "liveLink": "https://safety-monitoring.demo.dev",
+    "gallery": [],
+    "features": [
+      "Real-time PPE detection (safety helmets, high-visibility vests, safety goggles)",
+      "Geofenced exclusion zone violation monitoring",
+      "Instant push notifications and violation screenshots sent to safety supervisors",
+      "Analytics dashboard showing daily compliance scores and historical trends",
+      "Multi-camera RTSP stream ingestion at 30 FPS with edge acceleration support"
+    ],
+    "challenges": "Silhouettes of workers overlap (occlusion) in crowded areas, and objects like helmets appear tiny when viewed from distant security cameras.",
+    "solutions": "Fine-tuned YOLOv8 on custom construction site datasets. Implemented tracking-by-detection using ByteTrack to maintain detection status over consecutive frames, reducing false alerts by 85%.",
+    "results": "Maintains 28 frames per second (FPS) throughput on edge NVIDIA Jetson hardware. ByteTrack tracking keeps worker IDs constant, dropping false violation alerts by 85%.",
+    "lessonsLearned": "Training on site-specific, low-angle datasets is far more effective than scaling generic COCO datasets. Adding a temporal tracking layer prevents flickering detection boxes from firing duplicate alarms."
+  },
+  {
+    "id": "product-content-gen",
+    "title": "AI Product Content Generator",
+    "category": "Generative AI",
+    "description": "An automated e-commerce optimization tool that generates titles, descriptions, enhanced product images, and SEO tags from a single photo.",
+    "problemSolved": "Uploading hundreds of products to Shopify or Amazon requires copywriting and image editing that takes hours per product. Small businesses lack resource to write high-ranking SEO copy.",
+    "architecture": "Web frontend -> FastAPI Backend -> Multi-Modal Vision LLM -> GPT-4 Text Generation Engine -> Stable Diffusion Image Inpainting -> Shopify API Integrator.",
+    "techStack": ["OpenAI", "Computer Vision", "FastAPI", "Next.js", "Stable Diffusion", "Python"],
+    "gitLink": "https://github.com/mmiskatul/product-content-gen",
+    "liveLink": "https://ai-content-gen.demo.dev",
+    "gallery": [],
+    "features": [
+      "Visual product understanding (auto-detects color, style, materials, category)",
+      "High-converting SEO product title and description generation based on keyword targets",
+      "Automated image enhancement (background removal, shadow insertion, scene context generation)",
+      "Meta tags and search schema structured JSON generation",
+      "One-click sync to Shopify, WooCommerce, and Amazon Seller Central"
+    ],
+    "challenges": "Generating realistic product backgrounds without morphing or modifying the product itself.",
+    "solutions": "Implemented ControlNet in the image generation pipeline to lock the structural edges of the source product while diffusing new backgrounds into the masked outer boundary.",
+    "results": "Decreased product listing creation time by 90% for pilot merchant group. Generated SEO copy showed a 14% uplift in organic search click-through rate.",
+    "lessonsLearned": "ControlNet is essential; standard visual prompts for SD image diffusion skew the shapes of products, making details inaccurate for customers."
+  }
+]

@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #050816;
+  --color-secondary-bg: #0B1120;
+  --color-accent: #00F5D4;
+  --color-accent-purple: #7C3AED;
+  
+  --font-sans: 'Plus Jakarta Sans', var(--font-geist-sans), sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  --background: #050816;
+  --foreground: #F3F4F6;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(11, 17, 32, 0.85);
+  border-color: rgba(0, 245, 212, 0.3);
+  box-shadow: 0 0 25px rgba(0, 245, 212, 0.05);
+}
+
+.glass-input {
+  background: rgba(5, 8, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #F3F4F6;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+}
+.glass-input:focus {
+  border-color: #00F5D4;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.2);
+}
+
+/* Glow Effects */
+.glow-text {
+  text-shadow: 0 0 15px rgba(0, 245, 212, 0.4);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+}
+.glow-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.glow-btn:hover::after {
+  opacity: 1;
+}
+
+/* Animated Grid Background */
+.grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Flow animation for SVG connectors */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+.animate-flow-dash {
+  stroke-dasharray: 8, 4;
+  animation: dash 2s linear infinite;
+}
+
+/* Pulse animation for node glows */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(0, 245, 212, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(0, 245, 212, 0.8));
+  }
+}
+.pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
