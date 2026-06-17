@@ -122,7 +122,7 @@ export default function Contact() {
                 <FaGithub className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/miskatul-masabi"
+                href="https://www.linkedin.com/in/md-mishkatul-masabi-b55b76292/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/5 transition-all"

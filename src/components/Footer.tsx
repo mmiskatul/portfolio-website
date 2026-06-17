@@ -29,14 +29,6 @@ export default function Footer() {
           </p>
           <div className="flex justify-center md:justify-end items-center gap-4 text-[10px] font-mono text-gray-500">
             <span>Stack: Next.js 15 + Tailwind v4 + TS</span>
-            <span className="text-white/10">|</span>
-            <a
-              href="/abc"
-              className="text-gray-500 hover:text-accent transition-colors flex items-center gap-1"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-purple" />
-              Console Portal
-            </a>
           </div>
         </div>
 
